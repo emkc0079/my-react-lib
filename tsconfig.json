@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "ESNext", // Change to ESNext or ES6
+    "module": "ESNext", // Ensure this is ESNext for modern imports
     "jsx": "react",
     "declaration": true,
     "outDir": "./dist",
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true // Optional for faster builds
   },
   "include": ["src/**/*"]
 }
