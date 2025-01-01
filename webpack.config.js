@@ -1,21 +1,22 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/components/index.ts",
+  entry: "./src/index.tsx", // Update this to your actual entry point
   output: {
+    filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    filename: "my-first-webpack.bundle.js",
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/, // Match .ts or .tsx files
-        use: "ts-loader", // Use ts-loader to process these files
+        test: /\.tsx?$/, // This matches both .ts and .tsx files
+        use: "ts-loader",
         exclude: /node_modules/,
       },
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"], // Resolve these extensions
+    extensions: [".tsx", ".ts", ".js"], // Add file extensions to resolve
   },
+  mode: "development", // or 'production'
 };
