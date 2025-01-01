@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
+    "module": "ESNext", // Change to ESNext or ES6
     "jsx": "react",
+    "declaration": true,
+    "outDir": "./dist",
     "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist"
+    "esModuleInterop": true
   },
   "include": ["src/**/*"]
 }
